@@ -11,5 +11,6 @@ test("Deve comprar um ingresso", async function () {
     console.log(output);
     expect(output.ticketId).toBeDefined();
     expect(output.tid).toBeDefined();
-    expect(output.status).toBe("reserved");
+    expect(output.status).toBe("paid");
+    expect(output.price).toBe(300);
 });
