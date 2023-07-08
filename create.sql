@@ -9,7 +9,7 @@ CREATE TABLE fullcycle.event (
 );
 
 CREATE TABLE fullcycle.ticket (
-    ticket_uuid UUID,
+    ticket_id UUID,
     event_id UUID,
     email TEXT,
     status TEXT
