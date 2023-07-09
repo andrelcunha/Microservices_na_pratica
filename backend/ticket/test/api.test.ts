@@ -8,9 +8,8 @@ test("Deve comprar um ingresso", async function () {
     };
     const response = await axios.post("http://localhost:3000/purchase_ticket", input);
     const output = response.data;
-    //console.log(output);
     expect(output.ticketId).toBeDefined();
-    //expect(output.tid).toBeDefined();
-    expect(output.status).toBe("paid");
-    //expect(output.price).toBe(300);
+    expect(output.tid).toBeDefined();
+    expect(output.status).toBe("approved");
+    expect(output.price).toBe(300);
 });

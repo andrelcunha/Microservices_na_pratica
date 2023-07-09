@@ -2,7 +2,7 @@ import EventRepository from "../../application/repository/EventRepository";
 import Event from "../../domain/entities/Event";
 import pgp from 'pg-promise';
 
-export class EventRepositoryDatabase implements EventRepository {
+export default class EventRepositoryDatabase implements EventRepository {
     
     async get(eventId: string): Promise<Event> {
         const connection = pgp()("postgres://postgres:123456@localhost:5432/app");
